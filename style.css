@@ -1,18 +1,120 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+
     background: linear-gradient(#0077b6, #001f3f);
+
     color: white;
     text-align: center;
+
     min-height: 100vh;
 }
 
-h1 {
-    font-size: 50px;
-    margin-top: 80px;
-    letter-spacing: 3px;
+
+header {
+    padding: 60px 20px 30px;
 }
 
-p {
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+
+    letter-spacing: 4px;
+}
+
+
+.sottotitolo {
     font-size: 22px;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.intro {
+    background: rgba(255, 255, 255, 0.12);
+
+    margin: 30px 20px;
+    padding: 40px;
+
+    border-radius: 20px;
+}
+
+
+.intro h2 {
+    font-size: 32px;
+}
+
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+button {
+    background: white;
+    color: #0077b6;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 15px 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+.shark-list {
+    padding: 30px 20px;
+}
+
+
+.sharks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.shark-card {
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    width: 250px;
+
+    transition: 0.3s;
+}
+
+
+.shark-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.shark-card h3 {
+    font-size: 22px;
+}
+
+
+.shark-card p {
+    line-height: 1.5;
 }
