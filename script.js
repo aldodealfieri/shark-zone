@@ -1,3 +1,4 @@
+```javascript
 const sharkInfo = {
 
     white: {
@@ -98,3 +99,4 @@ document.addEventListener("keydown", function(event) {
     }
 
 });
+```
