@@ -1,5 +1,1 @@
-function scopriSquali() {
-    document.getElementById("squali").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+alert("JAVASCRIPT FUNZIONA 🦈");
