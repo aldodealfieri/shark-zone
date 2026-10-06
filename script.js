@@ -1,1 +1,5 @@
-alert("Benvenuta nella Shark Zone! 🦈");
+function scopriSquali() {
+    document.getElementById("squali").scrollIntoView({
+        behavior: "smooth"
+    });
+}
