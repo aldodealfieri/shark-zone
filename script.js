@@ -1,5 +1,3 @@
 function scopriSquali() {
-    document.getElementById("squali").scrollIntoView({
-        behavior: "smooth"
-    });
+    alert("IL BOTTONE FUNZIONA 🦈");
 }
