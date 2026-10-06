@@ -118,3 +118,12 @@ button:hover {
 .shark-card p {
     line-height: 1.5;
 }
+
+.shark-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
