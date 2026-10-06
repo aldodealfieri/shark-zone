@@ -12,12 +12,25 @@
 
 <body>
 
-    <header>
-        <h1>🦈 SHARK ZONE 🦈</h1>
+    <header class="hero">
 
-        <p class="sottotitolo">
-            Benvenuta nel fantastico mondo degli squali!
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+
+        <p class="small-title">WELCOME TO THE OCEAN</p>
+
+        <h1>🦈 SHARK<br><span>ZONE</span></h1>
+
+        <p class="subtitle">
+            Un piccolo angolo dell'oceano dedicato agli animali
+            più affascinanti del pianeta.
         </p>
+
+        <button class="main-button" onclick="scopriSquali()">
+            Esplora gli squali ↓
+        </button>
+
     </header>
 
 
@@ -25,45 +38,150 @@
 
         <section class="intro">
 
-            <h2>🌊 Esplora l'oceano</h2>
+            <p class="section-label">🌊 THE OCEAN</p>
+
+            <h2>Benvenuta nella Shark Zone</h2>
 
             <p>
-                Scopri curiosità, caratteristiche e stranezze
-                di alcuni degli animali più affascinanti del pianeta.
+                Preparati a conoscere alcuni degli squali più incredibili
+                che abitano i nostri oceani.
             </p>
-
-            <button onclick="scopriSquali()">🦈 Scopri gli squali</button>
 
         </section>
 
 
-        <section class="shark-list" id="squali">
+        <section class="shark-section" id="squali">
 
-            <h2>Gli squali più interessanti</h2>
+            <div class="section-heading">
 
-            <div class="sharks">
+                <div>
+                    <p class="section-label">🦈 SPECIES</p>
 
-            <div class="shark-card">
-
-            <img src="squalo-bianco.jpg" alt="Squalo bianco">
-
-            <h3>🦈 Squalo bianco</h3>
-
-            <p>
-                Uno dei predatori più famosi degli oceani.
-            </p>
-
-        </div>
-
-                <div class="shark-card">
-                    <h3>🔨 Squalo martello</h3>
-                    <p>Riconoscibile dalla sua incredibile forma della testa.</p>
+                    <h2>Gli squali più interessanti</h2>
                 </div>
 
-                <div class="shark-card">
-                    <h3>🐋 Squalo balena</h3>
-                    <p>Il pesce più grande conosciuto al mondo.</p>
-                </div>
+                <p class="section-description">
+                    Clicca su una card per scoprire una curiosità.
+                </p>
+
+            </div>
+
+
+            <div class="shark-grid">
+
+
+                <article class="shark-card" onclick="mostraInfo('white')">
+
+                    <div class="shark-image white-shark">
+                        <span>🦈</span>
+                    </div>
+
+                    <div class="card-content">
+
+                        <p class="card-number">01</p>
+
+                        <h3>Squalo bianco</h3>
+
+                        <p>
+                            Uno dei predatori più famosi degli oceani.
+                        </p>
+
+                        <span class="discover">
+                            Scopri di più →
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="shark-card" onclick="mostraInfo('hammer')">
+
+                    <div class="shark-image hammer-shark">
+                        <span>🔨</span>
+                    </div>
+
+                    <div class="card-content">
+
+                        <p class="card-number">02</p>
+
+                        <h3>Squalo martello</h3>
+
+                        <p>
+                            Impossibile confonderlo grazie alla sua particolare testa.
+                        </p>
+
+                        <span class="discover">
+                            Scopri di più →
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="shark-card" onclick="mostraInfo('whale')">
+
+                    <div class="shark-image whale-shark">
+                        <span>🐋</span>
+                    </div>
+
+                    <div class="card-content">
+
+                        <p class="card-number">03</p>
+
+                        <h3>Squalo balena</h3>
+
+                        <p>
+                            Il più grande pesce conosciuto al mondo.
+                        </p>
+
+                        <span class="discover">
+                            Scopri di più →
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="fact-section">
+
+            <div class="fact-box">
+
+                <p class="section-label">💡 LO SAPEVI?</p>
+
+                <h2 id="fact">
+                    Gli squali esistono da milioni di anni.
+                </h2>
+
+                <button class="small-button" onclick="nuovaCuriosita()">
+                    Altra curiosità
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="message">
+
+            <div class="message-content">
+
+                <span>🦈</span>
+
+                <h2>
+                    L'oceano è molto più<br>
+                    grande di quanto immagini.
+                </h2>
+
+                <p>
+                    E gli squali ne sono una delle parti più incredibili.
+                </p>
 
             </div>
 
@@ -71,6 +189,40 @@
 
     </main>
 
-<script src="script.js?v=2"></script>
+
+    <div class="modal" id="infoModal">
+
+        <div class="modal-box">
+
+            <button class="close-button" onclick="chiudiInfo()">×</button>
+
+            <span id="modalEmoji">🦈</span>
+
+            <p class="section-label">SHARK FACT</p>
+
+            <h2 id="modalTitle">Squalo</h2>
+
+            <p id="modalText">
+                Curiosità sullo squalo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>🦈 SHARK ZONE</p>
+
+        <span>
+            Made with 🌊 & a little bit of shark obsession
+        </span>
+
+    </footer>
+
+
+    <script src="script.js?v=3"></script>
+
 </body>
 </html>
