@@ -1,3 +1,4 @@
+```css
 * {
     box-sizing: border-box;
 }
@@ -143,7 +144,6 @@ body {
     height: 80px;
 
     left: 10%;
-
     top: 20%;
 }
 
@@ -153,7 +153,6 @@ body {
     height: 35px;
 
     right: 15%;
-
     top: 30%;
 
     animation-delay: 1s;
@@ -165,7 +164,6 @@ body {
     height: 55px;
 
     right: 8%;
-
     bottom: 20%;
 
     animation-delay: 2s;
@@ -318,61 +316,41 @@ main {
 .shark-image {
     height: 230px;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
     position: relative;
 
     overflow: hidden;
 }
 
 
-.shark-image::before {
-    content: "";
+.shark-image img {
+    width: 100%;
+    height: 100%;
 
-    position: absolute;
+    display: block;
 
-    width: 180px;
-    height: 180px;
+    object-fit: cover;
 
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.08);
+    transition: transform 0.5s;
 }
 
 
-.shark-image span {
-    font-size: 100px;
-
-    position: relative;
-
-    transition: 0.4s;
-}
-
-
-.shark-card:hover .shark-image span {
-    transform: scale(1.15) rotate(-5deg);
+.shark-card:hover .shark-image img {
+    transform: scale(1.08);
 }
 
 
 .white-shark {
-    background:
-        linear-gradient(135deg, #174d6d, #0a273e);
+    background: #174d6d;
 }
 
 
 .hammer-shark {
-    background:
-        linear-gradient(135deg, #23627e, #0a3048);
+    background: #23627e;
 }
 
 
 .whale-shark {
-    background:
-        linear-gradient(135deg, #28577b, #102d4a);
+    background: #28577b;
 }
 
 
@@ -557,7 +535,6 @@ main {
     position: absolute;
 
     top: 15px;
-
     right: 20px;
 
     border: none;
@@ -672,3 +649,4 @@ footer span {
     }
 
 }
+```
