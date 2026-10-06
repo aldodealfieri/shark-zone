@@ -1,4 +1,3 @@
-```javascript
 const sharkInfo = {
 
     white: {
