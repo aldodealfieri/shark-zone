@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#specie">Specie</a></li>
-                <li><a href="#habitat">Habitat & Mappa</a></li>
+                <li><a href="#habitat">Habitat</a></li>
                 <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#curiosita">Curiosità</a></li>
             </ul>
@@ -57,7 +57,7 @@
             <div class="grid-cards">
                 <!-- Squalo Bianco -->
                 <div class="card" onclick="openModal('bianco')">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80')">
+                    <div class="card-img img-bianco">
                         <span class="badge red">Vulnerabile</span>
                     </div>
                     <div class="card-body">
@@ -69,7 +69,7 @@
 
                 <!-- Squalo Balena -->
                 <div class="card" onclick="openModal('balena')">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1571752726700-53905c4998c2?auto=format&fit=crop&w=1000&q=80')">
+                    <div class="card-img img-balena">
                         <span class="badge green">Gigante Buono</span>
                     </div>
                     <div class="card-body">
@@ -81,7 +81,7 @@
 
                 <!-- Squalo Martello -->
                 <div class="card" onclick="openModal('martello')">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=1000&q=80')">
+                    <div class="card-img img-martello">
                         <span class="badge blue">In Pericolo</span>
                     </div>
                     <div class="card-body">
@@ -93,7 +93,7 @@
 
                 <!-- Squalo Pinna Nera -->
                 <div class="card" onclick="openModal('barriera')">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=1000&q=80')">
+                    <div class="card-img img-pinna-nera">
                         <span class="badge orange">Barriera Corallina</span>
                     </div>
                     <div class="card-body">
@@ -106,35 +106,27 @@
         </div>
     </section>
 
-    <!-- Sezione Habitat & Mappa -->
+    <!-- Sezione Habitat (Riorganizzata e pulita) -->
     <section id="habitat" class="section dark-section">
         <div class="container">
-            <h2 class="section-title text-white">Habitat e Distribuzione Geografica</h2>
+            <h2 class="section-title text-white">Habitat e Aree Geografiche</h2>
             <p class="section-subtitle text-light">Gli squali si sono adattati a ogni angolo del pianeta blu.</p>
             
-            <!-- Mappa Illustrata / Sezione Interattiva -->
-            <div class="map-container">
-                <div class="map-overlay-box">
-                    <i class="fa-solid fa-earth-americas map-icon"></i>
-                    <h3>Esplora le Aree del Globo</h3>
-                    <p>Dalle calde lagune tropicali ai freddi mari artici, seleziona una zona per scoprire i dettagli climatici.</p>
+            <div class="habitat-grid">
+                <div class="habitat-box">
+                    <i class="fa-solid fa-sun icon"></i>
+                    <h4>Barriere Coralline</h4>
+                    <p>Mari caldi e poco profondi, ricchi di biodiversità e rifugio ideale per i Pinna Nera e altre specie costiere.</p>
                 </div>
-                <div class="habitat-grid">
-                    <div class="habitat-box">
-                        <i class="fa-solid fa-sun icon"></i>
-                        <h4>Barriere Coralline</h4>
-                        <p>Mari caldi e poco profondi, ricchi di biodiversità e rifugio ideale per i Pinna Nera.</p>
-                    </div>
-                    <div class="habitat-box">
-                        <i class="fa-solid fa-water icon"></i>
-                        <h4>Acque Pelagiche</h4>
-                        <p>Oceani aperti ed enormi distese d'acqua blu dove dominano il Bianco e il Mako.</p>
-                    </div>
-                    <div class="habitat-box">
-                        <i class="fa-solid fa-snowflake icon"></i>
-                        <h4>Mari Freddi e Polari</h4>
-                        <p>Acque gelide del nord dove abita il longevo e misterioso Squalo della Groenlandia.</p>
-                    </div>
+                <div class="habitat-box">
+                    <i class="fa-solid fa-water icon"></i>
+                    <h4>Acque Pelagiche</h4>
+                    <p>Oceani aperti ed enormi distese d'acqua blu profonda dove dominano cacciatori veloci come il Bianco e il Mako.</p>
+                </div>
+                <div class="habitat-box">
+                    <i class="fa-solid fa-snowflake icon"></i>
+                    <h4>Mari Freddi e Polari</h4>
+                    <p>Acque gelide del nord del mondo dove abita il longevo e misterioso Squalo della Groenlandia.</p>
                 </div>
             </div>
         </div>
@@ -178,7 +170,7 @@
     <section id="curiosita" class="section dark-section">
         <div class="container">
             <h2 class="section-title text-white">Lo sapevi che...?</h2>
-            <p class="section-subtitle text-light">Clicca per scoprire tantissime curiosità incredibili sugli squali.</p>
+            <p class="section-subtitle text-light">Clicca sul pulsante per scoprire tantissime curiosità incredibili sugli squali.</p>
             
             <div class="fact-box">
                 <div id="fact-display" class="fact-text">
