@@ -115,7 +115,7 @@ nav ul li a:hover { color: var(--accent); }
 
 .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
 
-/* Griglia Card - Collegamento pulito alle immagini locali */
+/* Griglia Card */
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
 
 .card {
@@ -126,13 +126,17 @@ nav ul li a:hover { color: var(--accent); }
 
 .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0, 119, 182, 0.2); }
 
-.card-img { height: 220px; background-size: cover; background-position: center; position: relative; background-color: #0077b6; }
+.card-img-container {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
 
-/* Immagini caricate direttamente da te nella cartella img/ */
-.img-bianco { background-image: url('img/bianco.jpg'); }
-.img-balena { background-image: url('img/balena.jpg'); }
-.img-martello { background-image: url('img/martello.jpg'); }
-.img-pinna-nera { background-image: url('img/pinna-nera.jpg'); }
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .badge {
     position: absolute; top: 15px; right: 15px; color: var(--white);
@@ -150,7 +154,7 @@ nav ul li a:hover { color: var(--accent); }
 
 .card-footer-btn { color: var(--primary); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
 
-/* Mappa senza patina blu scura (pulita) */
+/* Mappa */
 .dark-section { background: linear-gradient(135deg, var(--dark), #011627) !important; }
 .text-white { color: var(--white) !important; }
 .text-light { color: var(--accent) !important; }
@@ -161,16 +165,19 @@ nav ul li a:hover { color: var(--accent); }
 }
 
 .ocean-map-graphic {
-    /* Senza filtri scuri sopra, mostra la tua mappa.jpg in modo pulito */
-    background-image: url('img/mappa.jpg');
-    background-size: cover;
-    background-position: center;
     height: 380px;
     border-radius: 16px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     overflow: hidden;
+    background-color: #001f3f;
+}
+
+.map-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .map-pin {
@@ -189,6 +196,7 @@ nav ul li a:hover { color: var(--accent); }
     transition: 0.3s;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 10;
 }
 
 .map-pin i { color: var(--secondary); font-size: 1rem; }
