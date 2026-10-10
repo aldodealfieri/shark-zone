@@ -115,7 +115,7 @@ nav ul li a:hover { color: var(--accent); }
 
 .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
 
-/* Griglia Card */
+/* Griglia Card e Immagini Stabili */
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
 
 .card {
@@ -127,6 +127,12 @@ nav ul li a:hover { color: var(--accent); }
 .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0, 119, 182, 0.2); }
 
 .card-img { height: 220px; background-size: cover; background-position: center; position: relative; }
+
+/* Link diretti e sicuri per le immagini delle specie */
+.img-bianco { background-image: url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1000&q=80'); }
+.img-balena { background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80'); }
+.img-martello { background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=1000&q=80'); }
+.img-pinna-nera { background-image: url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=1000&q=80'); }
 
 .badge {
     position: absolute; top: 15px; right: 15px; color: var(--white);
@@ -144,22 +150,10 @@ nav ul li a:hover { color: var(--accent); }
 
 .card-footer-btn { color: var(--primary); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
 
-/* Habitat & Mappa */
+/* Habitat */
 .dark-section { background: linear-gradient(135deg, var(--dark), #011627) !important; }
 .text-white { color: var(--white) !important; }
 .text-light { color: var(--accent) !important; }
-
-.map-container { display: flex; flex-direction: column; gap: 30px; }
-
-.map-overlay-box {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 25px; border-radius: 16px; text-align: center; color: var(--white);
-}
-
-.map-icon { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
-.map-overlay-box h3 { font-size: 1.4rem; margin-bottom: 8px; }
-.map-overlay-box p { color: var(--light); font-size: 0.95rem; }
 
 .habitat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
