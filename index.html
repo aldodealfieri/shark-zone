@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#specie">Specie</a></li>
-                <li><a href="#habitat">Habitat</a></li>
+                <li><a href="#mappa">Mappa Habitat</a></li>
                 <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#curiosita">Curiosità</a></li>
             </ul>
@@ -106,27 +106,37 @@
         </div>
     </section>
 
-    <!-- Sezione Habitat (Riorganizzata e pulita) -->
-    <section id="habitat" class="section dark-section">
+    <!-- Sezione Mappa e Habitat Interattiva -->
+    <section id="mappa" class="section dark-section">
         <div class="container">
-            <h2 class="section-title text-white">Habitat e Aree Geografiche</h2>
-            <p class="section-subtitle text-light">Gli squali si sono adattati a ogni angolo del pianeta blu.</p>
+            <h2 class="section-title text-white">Mappa e Zone di Diffusione</h2>
+            <p class="section-subtitle text-light">Clicca sui pin della mappa interattiva per scoprire dove vive ciascun gruppo.</p>
             
-            <div class="habitat-grid">
-                <div class="habitat-box">
-                    <i class="fa-solid fa-sun icon"></i>
-                    <h4>Barriere Coralline</h4>
-                    <p>Mari caldi e poco profondi, ricchi di biodiversità e rifugio ideale per i Pinna Nera e altre specie costiere.</p>
+            <div class="map-wrapper">
+                <!-- Mappa stilizzata degli oceani -->
+                <div class="ocean-map-graphic">
+                    <div class="map-pin pin-1" onclick="showHabitatInfo('artico')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Oceano Artico</span>
+                    </div>
+                    <div class="map-pin pin-2" onclick="showHabitatInfo('atlantico')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Oceano Atlantico</span>
+                    </div>
+                    <div class="map-pin pin-3" onclick="showHabitatInfo('indiano')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Oceano Indiano</span>
+                    </div>
+                    <div class="map-pin pin-4" onclick="showHabitatInfo('pacifico')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Oceano Pacifico</span>
+                    </div>
                 </div>
-                <div class="habitat-box">
-                    <i class="fa-solid fa-water icon"></i>
-                    <h4>Acque Pelagiche</h4>
-                    <p>Oceani aperti ed enormi distese d'acqua blu profonda dove dominano cacciatori veloci come il Bianco e il Mako.</p>
-                </div>
-                <div class="habitat-box">
-                    <i class="fa-solid fa-snowflake icon"></i>
-                    <h4>Mari Freddi e Polari</h4>
-                    <p>Acque gelide del nord del mondo dove abita il longevo e misterioso Squalo della Groenlandia.</p>
+
+                <!-- Box Informativo Dinamico della Mappa -->
+                <div id="map-info-box" class="map-info-box">
+                    <h3>🌍 Seleziona un'area sulla mappa</h3>
+                    <p>Clicca su uno dei marker geografici sopra per leggere le caratteristiche delle acque e le specie che vi abitano.</p>
                 </div>
             </div>
         </div>
