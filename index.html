@@ -1,245 +1,157 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Shark Zone 🦈</title>
-
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Abissi Marini - Il Mondo degli Squali</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="hero">
-
-        <div class="bubble bubble-1"></div>
-        <div class="bubble bubble-2"></div>
-        <div class="bubble bubble-3"></div>
-
-        <p class="small-title">WELCOME TO THE OCEAN</p>
-
-        <h1>🦈 SHARK<br><span>ZONE</span></h1>
-
-        <p class="subtitle">
-            Un piccolo angolo dell'oceano dedicato agli animali
-            più affascinanti del pianeta.
-        </p>
-
-        <button class="main-button" onclick="scopriSquali()">
-            Esplora gli squali ↓
-        </button>
-
+    <!-- Header / Navbar -->
+    <header id="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-water"></i> <span>SharkWorld</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#specie">Specie</a></li>
+                <li><a href="#curiosita">Curiosità</a></li>
+                <li><a href="#protezione">Conservazione</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </header>
 
+    <!-- Sezione Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>I Re degli Abissi</h1>
+            <p>Esplora l'affascinante, misterioso e fondamentale mondo dei predatori più perfetti dell'oceano.</p>
+            <a href="#specie" class="btn-primary">Scopri le Specie <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <div class="ocean-waves"></div>
+    </section>
 
-    <main>
-
-        <section class="intro">
-
-            <p class="section-label">🌊 THE OCEAN</p>
-
-            <h2>Benvenuta nella Shark Zone</h2>
-
-            <p>
-                Preparati a conoscere alcuni degli squali più incredibili
-                che abitano i nostri oceani.
-            </p>
-
-        </section>
-
-
-        <section class="shark-section" id="squali">
-
-            <div class="section-heading">
-
-                <div>
-                    <p class="section-label">🦈 SPECIES</p>
-
-                    <h2>Gli squali più interessanti</h2>
+    <!-- Sezione Specie -->
+    <section id="specie" class="section">
+        <div class="container">
+            <h2 class="section-title">Le Specie Più Iconiche</h2>
+            <p class="section-subtitle">Clicca sulle schede per scoprire i dettagli delle razze più affascinanti.</p>
+            
+            <div class="grid-cards">
+                <!-- Squalo Bianco -->
+                <div class="card" data-aos="fade-up">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=800&q=80')">
+                        <span class="badge">Apex Predator</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Squalo Bianco</h3>
+                        <p>Il più famoso predatore pelagico. Veloce, dotato di sensi acutissimi e capace di compiere spettacolari balzi fuori dall'acqua (breaching).</p>
+                        <ul class="stats">
+                            <li><i class="fa-solid fa-ruler"></i> Fino a 6 metri</li>
+                            <li><i class="fa-solid fa-weight-scale"></i> Fino a 2.2 tonnellate</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <p class="section-description">
-                    Clicca su una card per scoprire una curiosità.
-                </p>
+                <!-- Squalo Balena -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80')">
+                        <span class="badge gentle">Gentle Giant</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Squalo Balena</h3>
+                        <p>Il pesce più grande del mondo. Nonostante le dimensioni colossali, si nutre esclusivamente di plancton filtrando l'acqua del mare.</p>
+                        <ul class="stats">
+                            <li><i class="fa-solid fa-ruler"></i> Fino a 12-18 metri</li>
+                            <li><i class="fa-solid fa-utensils"></i> Filtratore di plancton</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <!-- Squalo Martello -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=800&q=80')">
+                        <span class="badge">Visione 360°</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Squalo Martello</h3>
+                        <p>Caratterizzato dalla forma unica della testa (cefalofoil), che migliora la sua capacità visiva e la ricezione dei campi elettrici delle prede.</p>
+                        <ul class="stats">
+                            <li><i class="fa-solid fa-eye"></i> Ampio campo visivo</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Oceani tropicali</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Squalo Tigre -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=800&q=80')">
+                        <span class="badge">Opportunista</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Squalo Tigre</h3>
+                        <p>Chiamato la "pattumiera del mare" per la sua abitudine di nutrirsi di quasi tutto ciò che incontra. È facilmente riconoscibile per le strisce verticali.</p>
+                        <ul class="stats">
+                            <li><i class="fa-solid fa-ruler"></i> Fino a 5 metri</li>
+                            <li><i class="fa-solid fa-shield-cat"></i> Morso potentissimo</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-
-            <div class="shark-grid">
-
-
-                <article class="shark-card" onclick="mostraInfo('white')">
-
-                    <div class="shark-image white-shark">
-
-                        <img
-                            src="squalo-bianco.jpg"
-                            alt="Squalo bianco"
-                        >
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-number">01</p>
-
-                        <h3>Squalo bianco</h3>
-
-                        <p>
-                            Uno dei predatori più famosi degli oceani.
-                        </p>
-
-                        <span class="discover">
-                            Scopri di più →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="shark-card" onclick="mostraInfo('hammer')">
-
-                    <div class="shark-image hammer-shark">
-
-                        <img
-                            src="squalo-martello.jpg"
-                            alt="Squalo martello"
-                        >
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-number">02</p>
-
-                        <h3>Squalo martello</h3>
-
-                        <p>
-                            Impossibile confonderlo grazie alla sua particolare testa.
-                        </p>
-
-                        <span class="discover">
-                            Scopri di più →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="shark-card" onclick="mostraInfo('whale')">
-
-                    <div class="shark-image whale-shark">
-
-                        <img
-                            src="squalo-balena.jpg"
-                            alt="Squalo balena"
-                        >
-
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-number">03</p>
-
-                        <h3>Squalo balena</h3>
-
-                        <p>
-                            Il più grande pesce conosciuto al mondo.
-                        </p>
-
-                        <span class="discover">
-                            Scopri di più →
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-        <section class="fact-section">
-
-            <div class="fact-box">
-
-                <p class="section-label">💡 LO SAPEVI?</p>
-
-                <h2 id="fact">
-                    Gli squali esistono da milioni di anni.
-                </h2>
-
-                <button class="small-button" onclick="nuovaCuriosita()">
-                    Altra curiosità
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <section class="message">
-
-            <div class="message-content">
-
-                <span>🦈</span>
-
-                <h2>
-                    L'oceano è molto più<br>
-                    grande di quanto immagini.
-                </h2>
-
-                <p>
-                    E gli squali ne sono una delle parti più incredibili.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <div class="modal" id="infoModal">
-
-        <div class="modal-box">
-
-            <button class="close-button" onclick="chiudiInfo()">×</button>
-
-            <span id="modalEmoji">🦈</span>
-
-            <p class="section-label">SHARK FACT</p>
-
-            <h2 id="modalTitle">Squalo</h2>
-
-            <p id="modalText">
-                Curiosità sullo squalo.
-            </p>
-
         </div>
+    </section>
 
-    </div>
+    <!-- Sezione Curiosità / Interattiva -->
+    <section id="curiosita" class="section dark-section">
+        <div class="container">
+            <h2 class="section-title text-white">Lo sapevi che...?</h2>
+            <p class="section-subtitle text-light">Clicca sul pulsante per scoprire una curiosità incredibile sugli squali!</p>
+            
+            <div class="fact-box">
+                <div id="fact-display" class="fact-text">
+                    Gli squali esistono da più di 400 milioni di anni, il che significa che sono più antichi degli alberi e dei dinosauri!
+                </div>
+                <button id="fact-btn" class="btn-secondary"><i class="fa-solid fa-lightbulb"></i> Genera un'altra curiosità</button>
+            </div>
+        </div>
+    </section>
 
+    <!-- Sezione Protezione -->
+    <section id="protezione" class="section">
+        <div class="container info-split">
+            <div class="info-text">
+                <h2>Proteggere i Guardiani dell'Oceano</h2>
+                <p>Gli squali sono fondamentali per mantenere l'equilibrio degli ecosistemi marini. Essendo predatori apicali, controllano le popolazioni delle specie sottostanti e prevengono il degrado degli habitat.</p>
+                <p>Ogni anno milioni di squali vengono cacciati principalmente per il finning (il taglio delle pinne). Sostenere la conservazione marina significa proteggere il futuro del nostro pianeta blu.</p>
+            </div>
+            <div class="info-stats">
+                <div class="stat-card">
+                    <h4>400+ Milioni</h4>
+                    <p>Anni di evoluzione sulla Terra</p>
+                </div>
+                <div class="stat-card">
+                    <h4>~100 Milioni</h4>
+                    <p>Squali uccisi ogni anno dall'uomo</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
-
-        <p>🦈 SHARK ZONE</p>
-
-        <span>
-            Made with 🌊 & a little bit of shark obsession
-        </span>
-
+        <p>Creato con passione per l'oceano &bull; &copy; 2026 SharkWorld</p>
     </footer>
 
-
-    <script src="script.js?v=4"></script>
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
-```
