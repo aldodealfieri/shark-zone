@@ -22,7 +22,7 @@ const sharkData = {
         size: "3.5 - 6 metri",
         diet: "Razze, cefalopodi, crostacei",
         status: "In Pericolo Critico",
-        desc: "La forma insolita del capo gli consente di avere un raggio visivo a 360 gradi verticale. Ama nuotare in grandi banchi durante le ore diurne attorno ai secche oceaniche."
+        desc: "La forma insolita del capo gli consente di avere un raggio visivo a 360 gradi verticale. Ama nuotare in grandi banchi durante le ore diurne attorno alle secche oceaniche."
     },
     barriera: {
         title: "Squalo Pinna Nera del Reef",
@@ -34,13 +34,17 @@ const sharkData = {
     }
 };
 
-// Curiosità
+// Lista ampliata di curiosità incredibili sugli squali
 const sharkFacts = [
     "Gli squali esistono da più di 400 milioni di anni, ovvero da prima che comparissero gli alberi sulla Terra!",
-    "La maggior parte delle specie di squali deve nuotare continuamente per non affondare e far scorrere acqua nelle branchie.",
-    "Gli squali possono avvertire una goccia di sangue diffusa in una piscina olimpionica d'acqua.",
-    "La pelle degli squali è formata da microscopici dentelli dermici che riducono l'attrito con l'acqua.",
-    "Un singolo squalo può cambiare e sostituire fino a 30.000 denti nel corso di tutta la sua vita!"
+    "La maggior parte delle specie di squali deve nuotare continuamente per non affondare e far scorrere l'acqua nelle branchie.",
+    "Gli squali possono avvertire una singola goccia di sangue disposta in milioni di litri d'acqua.",
+    "La pelle degli squali è formata da microscopici dentelli dermici che riducono l'attrito con l'acqua, rendendoli silenziosissimi.",
+    "Un singolo squalo può cambiare e sostituire fino a 30.000 denti nel corso di tutta la sua vita!",
+    "Lo squalo della Groenlandia può vivere per oltre 400 anni, risultando il vertebrato longevo più longevo del pianeta.",
+    "Alcune specie di squali, come lo squalo leone o lo squalo gatto, depongono le uova in particolari involucri protettivi chiamati 'borse delle mermaid'.",
+    "Gli squali non hanno le ossa: il loro intero scheletro è composto da cartilagine flessibile e robusta.",
+    "Lo squalo volpe usa la sua lunghissima pinna caudale come una frusta per stordire i banchi di pesci prima di mangiarli."
 ];
 
 // Gestione Modal Popup
@@ -69,7 +73,7 @@ window.onclick = function(e) {
     if (e.target == document.getElementById('modal')) closeModal();
 }
 
-// Generatore Curiosità
+// Generatore Curiosità (pescate casualmente dal nuovo elenco ricco)
 const factBtn = document.getElementById('fact-btn');
 const factDisplay = document.getElementById('fact-display');
 
@@ -119,7 +123,7 @@ function resetQuiz() {
     quizAnswers = {};
 }
 
-// Menu Mobile e Scroll
+// Menu Mobile e Scroll Navbar
 const mobileMenu = document.getElementById('mobile-menu');
 const navList = document.querySelector('nav ul');
 const navbar = document.getElementById('navbar');
