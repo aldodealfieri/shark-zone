@@ -34,15 +34,15 @@ const sharkData = {
     }
 };
 
-// Lista ampliata di curiosità incredibili sugli squali
+// Lista ricca di curiosità sugli squali
 const sharkFacts = [
     "Gli squali esistono da più di 400 milioni di anni, ovvero da prima che comparissero gli alberi sulla Terra!",
     "La maggior parte delle specie di squali deve nuotare continuamente per non affondare e far scorrere l'acqua nelle branchie.",
     "Gli squali possono avvertire una singola goccia di sangue disposta in milioni di litri d'acqua.",
     "La pelle degli squali è formata da microscopici dentelli dermici che riducono l'attrito con l'acqua, rendendoli silenziosissimi.",
     "Un singolo squalo può cambiare e sostituire fino a 30.000 denti nel corso di tutta la sua vita!",
-    "Lo squalo della Groenlandia può vivere per oltre 400 anni, risultando il vertebrato longevo più longevo del pianeta.",
-    "Alcune specie di squali, come lo squalo leone o lo squalo gatto, depongono le uova in particolari involucri protettivi chiamati 'borse delle mermaid'.",
+    "Lo squalo della Groenlandia può vivere per oltre 400 anni, risultando il vertebrato più longevo del pianeta.",
+    "Alcune specie di squali depongono le uova in particolari involucri protettivi chiamati 'borse delle mermaid'.",
     "Gli squali non hanno le ossa: il loro intero scheletro è composto da cartilagine flessibile e robusta.",
     "Lo squalo volpe usa la sua lunghissima pinna caudale come una frusta per stordire i banchi di pesci prima di mangiarli."
 ];
@@ -73,7 +73,7 @@ window.onclick = function(e) {
     if (e.target == document.getElementById('modal')) closeModal();
 }
 
-// Generatore Curiosità (pescate casualmente dal nuovo elenco ricco)
+// Generatore Curiosità
 const factBtn = document.getElementById('fact-btn');
 const factDisplay = document.getElementById('fact-display');
 
