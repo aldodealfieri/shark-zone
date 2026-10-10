@@ -26,12 +26,8 @@ body {
 /* Navbar */
 header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    top: 0; left: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
     padding: 20px 8%;
     background: rgba(3, 4, 94, 0.85);
     backdrop-filter: blur(12px);
@@ -49,101 +45,51 @@ header.scrolled {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; align-items: center; gap: 10px;
 }
 
 .logo i { color: var(--secondary); }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
+nav ul { list-style: none; display: flex; gap: 25px; }
+nav ul li a { text-decoration: none; color: var(--white); font-weight: 500; transition: color 0.3s; }
 nav ul li a:hover { color: var(--accent); }
 
-.menu-toggle {
-    display: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+.menu-toggle { display: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
 
-/* Hero Section & Animation Bolle */
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, #02010a, var(--dark), var(--primary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    padding: 0 20px;
-    position: relative;
-    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; color: var(--white); padding: 0 20px;
+    position: relative; overflow: hidden;
 }
 
 .sub-tagline {
     background: rgba(255, 255, 255, 0.15);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 20px;
+    padding: 6px 16px; border-radius: 20px; font-size: 0.85rem;
+    letter-spacing: 1px; display: inline-block; margin-bottom: 20px;
     backdrop-filter: blur(5px);
 }
 
-.hero-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    max-width: 620px;
-    margin: 0 auto 35px auto;
-    color: var(--light);
-}
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; margin-bottom: 20px; }
+.hero-content p { font-size: 1.25rem; max-width: 620px; margin: 0 auto 35px auto; color: var(--light); }
 
 .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--secondary);
-    color: var(--dark);
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--secondary); color: var(--dark);
+    padding: 14px 32px; border-radius: 30px; text-decoration: none;
+    font-weight: 700; transition: 0.3s; border: none; cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    background: var(--white);
-}
+.btn-primary:hover { transform: translateY(-3px); background: var(--white); }
 
-/* Effetto Bolle Subacquee */
+/* Bolle animate */
 .bubbles .bubble {
-    position: absolute;
-    bottom: -50px;
+    position: absolute; bottom: -50px;
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    animation: rise 10s infinite ease-in;
+    border-radius: 50%; animation: rise 10s infinite ease-in;
 }
 
 .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-duration: 8s; }
@@ -163,58 +109,28 @@ nav ul li a:hover { color: var(--accent); }
 .section:nth-child(even) { background-color: var(--white); }
 
 .section-title {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.6rem;
-    color: var(--dark);
-    margin-bottom: 10px;
+    text-align: center; font-family: 'Playfair Display', serif;
+    font-size: 2.6rem; color: var(--dark); margin-bottom: 10px;
 }
 
-.section-subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 50px;
-    font-size: 1.1rem;
-}
+.section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
 
-/* Card Specie */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
+/* Griglia Card */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
 
 .card {
-    background: var(--white);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    cursor: pointer;
+    background: var(--white); border-radius: 16px; overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06); cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 119, 182, 0.2);
-}
+.card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0, 119, 182, 0.2); }
 
-.card-img {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
+.card-img { height: 220px; background-size: cover; background-position: center; position: relative; }
 
 .badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: var(--white);
-    padding: 6px 14px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border-radius: 20px;
-    backdrop-filter: blur(4px);
+    position: absolute; top: 15px; right: 15px; color: var(--white);
+    padding: 6px 14px; font-size: 0.78rem; font-weight: 600; border-radius: 20px; backdrop-filter: blur(4px);
 }
 
 .badge.red { background: rgba(230, 57, 70, 0.9); }
@@ -226,151 +142,83 @@ nav ul li a:hover { color: var(--accent); }
 .card-body h3 { color: var(--dark); margin-bottom: 10px; font-size: 1.35rem; }
 .card-body p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
 
-.card-footer-btn {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
+.card-footer-btn { color: var(--primary); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
 
-/* Habitat Section */
+/* Habitat & Mappa */
 .dark-section { background: linear-gradient(135deg, var(--dark), #011627) !important; }
 .text-white { color: var(--white) !important; }
 .text-light { color: var(--accent) !important; }
 
-.habitat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+.map-container { display: flex; flex-direction: column; gap: 30px; }
+
+.map-overlay-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px; border-radius: 16px; text-align: center; color: var(--white);
 }
+
+.map-icon { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
+.map-overlay-box h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.map-overlay-box p { color: var(--light); font-size: 0.95rem; }
+
+.habitat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
 .habitat-box {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 16px;
-    text-align: center;
-    color: var(--white);
-    transition: 0.3s;
+    padding: 30px; border-radius: 16px; text-align: center; color: var(--white); transition: 0.3s;
 }
 
-.habitat-box:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
-
+.habitat-box:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-5px); }
 .habitat-box .icon { font-size: 2.2rem; color: var(--secondary); margin-bottom: 15px; }
 .habitat-box h4 { font-size: 1.3rem; margin-bottom: 10px; }
 .habitat-box p { color: var(--light); font-size: 0.95rem; line-height: 1.5; }
 
 /* Quiz Container */
 .quiz-card {
-    max-width: 650px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid #eef3f8;
+    max-width: 650px; margin: 0 auto; background: var(--white);
+    padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #eef3f8;
 }
 
 .quiz-step { display: none; }
 .quiz-step.active { display: block; animation: fadeIn 0.5s ease; }
 
-.quiz-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-}
+.quiz-options { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
 
 .quiz-options button {
-    background: var(--gray-bg);
-    border: 1px solid #dcdfe3;
-    padding: 14px 20px;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.2s;
+    background: var(--gray-bg); border: 1px solid #dcdfe3; padding: 14px 20px;
+    border-radius: 10px; text-align: left; font-size: 1rem; cursor: pointer; transition: 0.2s;
 }
 
-.quiz-options button:hover {
-    background: var(--secondary);
-    color: var(--dark);
-    font-weight: 600;
-    border-color: var(--secondary);
-}
-
+.quiz-options button:hover { background: var(--secondary); color: var(--dark); font-weight: 600; border-color: var(--secondary); }
 .mt-20 { margin-top: 20px; }
 
 /* Fact Box */
 .fact-box {
-    max-width: 680px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 35px;
-    border-radius: 20px;
-    text-align: center;
+    max-width: 680px; margin: 0 auto; background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12); padding: 35px; border-radius: 20px; text-align: center;
 }
 
-.fact-text {
-    font-size: 1.2rem;
-    color: var(--light);
-    line-height: 1.7;
-    margin-bottom: 25px;
-    min-height: 70px;
-    transition: opacity 0.3s;
-}
+.fact-text { font-size: 1.2rem; color: var(--light); line-height: 1.7; margin-bottom: 25px; min-height: 70px; transition: opacity 0.3s; }
 
 .btn-secondary {
-    background: var(--secondary);
-    color: var(--dark);
-    border: none;
-    padding: 12px 26px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
+    background: var(--secondary); color: var(--dark); border: none;
+    padding: 12px 26px; font-size: 1rem; font-weight: 600; border-radius: 30px; cursor: pointer; transition: 0.3s;
 }
 
 .btn-secondary:hover { background: var(--white); transform: scale(1.04); }
 
 /* Modal Popup */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(2, 1, 10, 0.75);
-    backdrop-filter: blur(8px);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(2, 1, 10, 0.75); backdrop-filter: blur(8px); z-index: 2000; justify-content: center; align-items: center;
 }
 
 .modal-content {
-    background: var(--white);
-    padding: 35px;
-    border-radius: 20px;
-    max-width: 550px;
-    width: 90%;
-    position: relative;
-    animation: popIn 0.3s ease;
+    background: var(--white); padding: 35px; border-radius: 20px; max-width: 550px; width: 90%; position: relative; animation: popIn 0.3s ease;
 }
 
-.close-btn {
-    position: absolute;
-    top: 15px; right: 20px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #888;
-}
-
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 1.8rem; cursor: pointer; color: #888; }
 .modal-info-list { list-style: none; margin-top: 15px; }
 .modal-info-list li { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
 .modal-info-list strong { color: var(--dark); }
@@ -380,16 +228,9 @@ footer { background: var(--dark); color: var(--light); text-align: center; paddi
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-/* Mobile Responsive */
+/* Mobile */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px; left: 0; width: 100%;
-        background: var(--dark);
-        padding: 20px; text-align: center;
-    }
+    nav ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: var(--dark); padding: 20px; text-align: center; }
     nav ul.active { display: flex; }
     .menu-toggle { display: block; }
     .hero-content h1 { font-size: 2.6rem; }
