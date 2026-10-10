@@ -115,7 +115,7 @@ nav ul li a:hover { color: var(--accent); }
 
 .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.1rem; }
 
-/* Griglia Card - Collegamento Immagini Locali o Fallback */
+/* Griglia Card - Collegamento pulito alle immagini locali */
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
 
 .card {
@@ -128,11 +128,11 @@ nav ul li a:hover { color: var(--accent); }
 
 .card-img { height: 220px; background-size: cover; background-position: center; position: relative; background-color: #0077b6; }
 
-/* Inserisci i file nella cartella img/ del tuo progetto */
-.img-bianco { background-image: url('img/bianco.jpg'), url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1000&q=80'); }
-.img-balena { background-image: url('img/balena.jpg'), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80'); }
-.img-martello { background-image: url('img/martello.jpg'), url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=1000&q=80'); }
-.img-pinna-nera { background-image: url('img/pinna-nera.jpg'), url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=1000&q=80'); }
+/* Immagini caricate direttamente da te nella cartella img/ */
+.img-bianco { background-image: url('img/bianco.jpg'); }
+.img-balena { background-image: url('img/balena.jpg'); }
+.img-martello { background-image: url('img/martello.jpg'); }
+.img-pinna-nera { background-image: url('img/pinna-nera.jpg'); }
 
 .badge {
     position: absolute; top: 15px; right: 15px; color: var(--white);
@@ -150,7 +150,7 @@ nav ul li a:hover { color: var(--accent); }
 
 .card-footer-btn { color: var(--primary); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
 
-/* Stile Mappa Interattiva con immagine di sfondo mappa */
+/* Mappa senza patina blu scura (pulita) */
 .dark-section { background: linear-gradient(135deg, var(--dark), #011627) !important; }
 .text-white { color: var(--white) !important; }
 .text-light { color: var(--accent) !important; }
@@ -161,8 +161,8 @@ nav ul li a:hover { color: var(--accent); }
 }
 
 .ocean-map-graphic {
-    /* Mappa locale o pattern geografico ad alta risoluzione */
-    background-image: linear-gradient(rgba(3, 4, 94, 0.65), rgba(3, 4, 94, 0.65)), url('img/mappa.jpg'), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80');
+    /* Senza filtri scuri sopra, mostra la tua mappa.jpg in modo pulito */
+    background-image: url('img/mappa.jpg');
     background-size: cover;
     background-position: center;
     height: 380px;
@@ -195,11 +195,11 @@ nav ul li a:hover { color: var(--accent); }
 .map-pin:hover { background: var(--secondary); color: var(--dark); transform: scale(1.1); }
 .map-pin:hover i { color: var(--dark); }
 
-/* Posizioni reali del planisfero */
-.pin-1 { top: 12%; left: 45%; } /* Artico */
-.pin-2 { top: 40%; left: 28%; } /* Atlantico */
-.pin-3 { top: 60%; left: 62%; } /* Indiano */
-.pin-4 { top: 45%; left: 80%; } /* Pacifico */
+/* Posizioni dei pin sulla mappa */
+.pin-1 { top: 12%; left: 45%; }
+.pin-2 { top: 40%; left: 28%; }
+.pin-3 { top: 60%; left: 62%; }
+.pin-4 { top: 45%; left: 80%; }
 
 .map-info-box {
     margin-top: 25px;
