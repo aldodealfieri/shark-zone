@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abissi Marini - Il Mondo degli Squali</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
@@ -21,8 +21,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#specie">Specie</a></li>
+                <li><a href="#habitat">Habitat</a></li>
+                <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#curiosita">Curiosità</a></li>
-                <li><a href="#protezione">Conservazione</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="mobile-menu">
@@ -30,128 +31,172 @@
         </div>
     </header>
 
-    <!-- Sezione Hero -->
+    <!-- Sezione Hero con Bolle animate -->
     <section id="home" class="hero">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
         <div class="hero-content">
+            <span class="sub-tagline"><i class="fa-solid fa-compass"></i> Guida Esclusiva agli Ecosistemi Marini</span>
             <h1>I Re degli Abissi</h1>
             <p>Esplora l'affascinante, misterioso e fondamentale mondo dei predatori più perfetti dell'oceano.</p>
             <a href="#specie" class="btn-primary">Scopri le Specie <i class="fa-solid fa-arrow-down"></i></a>
         </div>
-        <div class="ocean-waves"></div>
     </section>
 
-    <!-- Sezione Specie -->
+    <!-- Sezione Specie (con immagini ad alta risoluzione) -->
     <section id="specie" class="section">
         <div class="container">
             <h2 class="section-title">Le Specie Più Iconiche</h2>
-            <p class="section-subtitle">Clicca sulle schede per scoprire i dettagli delle razze più affascinanti.</p>
+            <p class="section-subtitle">Clicca su una scheda per aprire la scheda tecnica dettagliata.</p>
             
             <div class="grid-cards">
                 <!-- Squalo Bianco -->
-                <div class="card" data-aos="fade-up">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=800&q=80')">
-                        <span class="badge">Apex Predator</span>
+                <div class="card" onclick="openModal('bianco')">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1000&q=80')">
+                        <span class="badge red">Vulnerabile</span>
                     </div>
                     <div class="card-body">
                         <h3>Squalo Bianco</h3>
-                        <p>Il più famoso predatore pelagico. Veloce, dotato di sensi acutissimi e capace di compiere spettacolari balzi fuori dall'acqua (breaching).</p>
-                        <ul class="stats">
-                            <li><i class="fa-solid fa-ruler"></i> Fino a 6 metri</li>
-                            <li><i class="fa-solid fa-weight-scale"></i> Fino a 2.2 tonnellate</li>
-                        </ul>
+                        <p>Il più celebre predatore pelagico. Raggiunge velocità incredibili durante la caccia.</p>
+                        <div class="card-footer-btn">Dettagli Completi <i class="fa-solid fa-circle-plus"></i></div>
                     </div>
                 </div>
 
                 <!-- Squalo Balena -->
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80')">
-                        <span class="badge gentle">Gentle Giant</span>
+                <div class="card" onclick="openModal('balena')">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80')">
+                        <span class="badge green">Gigante Buono</span>
                     </div>
                     <div class="card-body">
                         <h3>Squalo Balena</h3>
-                        <p>Il pesce più grande del mondo. Nonostante le dimensioni colossali, si nutre esclusivamente di plancton filtrando l'acqua del mare.</p>
-                        <ul class="stats">
-                            <li><i class="fa-solid fa-ruler"></i> Fino a 12-18 metri</li>
-                            <li><i class="fa-solid fa-utensils"></i> Filtratore di plancton</li>
-                        </ul>
+                        <p>Il gigante pacifico degli oceani. Può vivere fino a 100 anni ed è del tutto inoffensivo.</p>
+                        <div class="card-footer-btn">Dettagli Completi <i class="fa-solid fa-circle-plus"></i></div>
                     </div>
                 </div>
 
                 <!-- Squalo Martello -->
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=800&q=80')">
-                        <span class="badge">Visione 360°</span>
+                <div class="card" onclick="openModal('martello')">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=1000&q=80')">
+                        <span class="badge blue">In Pericolo</span>
                     </div>
                     <div class="card-body">
                         <h3>Squalo Martello</h3>
-                        <p>Caratterizzato dalla forma unica della testa (cefalofoil), che migliora la sua capacità visiva e la ricezione dei campi elettrici delle prede.</p>
-                        <ul class="stats">
-                            <li><i class="fa-solid fa-eye"></i> Ampio campo visivo</li>
-                            <li><i class="fa-solid fa-location-dot"></i> Oceani tropicali</li>
-                        </ul>
+                        <p>Famoso per la sua testa a forma di T con visione a 360° e recettori elettrici.</p>
+                        <div class="card-footer-btn">Dettagli Completi <i class="fa-solid fa-circle-plus"></i></div>
                     </div>
                 </div>
 
-                <!-- Squalo Tigre -->
-                <div class="card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=800&q=80')">
-                        <span class="badge">Opportunista</span>
+                <!-- Squalo di Barriera -->
+                <div class="card" onclick="openModal('barriera')">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=1000&q=80')">
+                        <span class="badge orange">Barriera Corallina</span>
                     </div>
                     <div class="card-body">
-                        <h3>Squalo Tigre</h3>
-                        <p>Chiamato la "pattumiera del mare" per la sua abitudine di nutrirsi di quasi tutto ciò che incontra. È facilmente riconoscibile per le strisce verticali.</p>
-                        <ul class="stats">
-                            <li><i class="fa-solid fa-ruler"></i> Fino a 5 metri</li>
-                            <li><i class="fa-solid fa-shield-cat"></i> Morso potentissimo</li>
-                        </ul>
+                        <h3>Squalo Pinna Nera</h3>
+                        <p>Agile e veloce, popola le barriere coralline tropicali e la laguna costiera.</p>
+                        <div class="card-footer-btn">Dettagli Completi <i class="fa-solid fa-circle-plus"></i></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Curiosità / Interattiva -->
+    <!-- Sezione Habitat -->
+    <section id="habitat" class="section dark-section">
+        <div class="container">
+            <h2 class="section-title text-white">Gli Habitat Oceanici</h2>
+            <p class="section-subtitle text-light">Dove vivono gli squali nel mondo?</p>
+            
+            <div class="habitat-grid">
+                <div class="habitat-box">
+                    <i class="fa-solid fa-sun icon"></i>
+                    <h4>Barriere Coralline</h4>
+                    <p>Mari caldi e poco profondi, ricchi di biodiversità (Pinna Nera, Squalo del Reef).</p>
+                </div>
+                <div class="habitat-box">
+                    <i class="fa-solid fa-water icon"></i>
+                    <h4>Acque Pelagiche</h4>
+                    <p>Oceani aperti ed enormi distese d'acqua blu (Squalo Bianco, Squalo Mako).</p>
+                </div>
+                <div class="habitat-box">
+                    <i class="fa-solid fa-mountain icon"></i>
+                    <h4>Pianure Abissali</h4>
+                    <p>Profondità buie e fredde oltre i 1000 metri (Squalo Goblin, Squalo Capopiatto).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Quiz Interattivo -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <h2 class="section-title">Mini Quiz: Che Squalo Sei?</h2>
+            <p class="section-subtitle">Rispondi a 3 domande per scoprire quale specie ti rispecchia di più!</p>
+
+            <div id="quiz-container" class="quiz-card">
+                <div id="quiz-step-1" class="quiz-step active">
+                    <h3>1. Come ami passare il tuo tempo libero?</h3>
+                    <div class="quiz-options">
+                        <button onclick="selectAnswer(1, 'sport')">Facendo sport frenetici e sfide estreme</button>
+                        <button onclick="selectAnswer(1, 'relax')">Rilassandomi al mare e mangiando buon cibo</button>
+                        <button onclick="selectAnswer(1, 'explore')">Esplorando posti nuovi e curiosando in giro</button>
+                    </div>
+                </div>
+
+                <div id="quiz-step-2" class="quiz-step">
+                    <h3>2. Qual è il tuo superpotere preferito?</h3>
+                    <div class="quiz-options">
+                        <button onclick="selectAnswer(2, 'speed')">Super velocità e forza eccezionale</button>
+                        <button onclick="selectAnswer(2, 'calm')">Super pazienza e saggezza infinita</button>
+                        <button onclick="selectAnswer(2, 'vision')">Vista a 360° e sesto senso infallibile</button>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="quiz-step">
+                    <h3 id="result-title">Calcolo del risultato...</h3>
+                    <p id="result-desc"></p>
+                    <button onclick="resetQuiz()" class="btn-primary mt-20">Rifai il Quiz <i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Curiosità -->
     <section id="curiosita" class="section dark-section">
         <div class="container">
             <h2 class="section-title text-white">Lo sapevi che...?</h2>
-            <p class="section-subtitle text-light">Clicca sul pulsante per scoprire una curiosità incredibile sugli squali!</p>
+            <p class="section-subtitle text-light">Genera nuove curiosità scientifiche ad ogni click.</p>
             
             <div class="fact-box">
                 <div id="fact-display" class="fact-text">
-                    Gli squali esistono da più di 400 milioni di anni, il che significa che sono più antichi degli alberi e dei dinosauri!
+                    Gli squali esistono da più di 400 milioni di anni, ovvero da prima che comparissero gli alberi sulla Terra!
                 </div>
-                <button id="fact-btn" class="btn-secondary"><i class="fa-solid fa-lightbulb"></i> Genera un'altra curiosità</button>
+                <button id="fact-btn" class="btn-secondary"><i class="fa-solid fa-lightbulb"></i> Scopri un'altra curiosità</button>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Protezione -->
-    <section id="protezione" class="section">
-        <div class="container info-split">
-            <div class="info-text">
-                <h2>Proteggere i Guardiani dell'Oceano</h2>
-                <p>Gli squali sono fondamentali per mantenere l'equilibrio degli ecosistemi marini. Essendo predatori apicali, controllano le popolazioni delle specie sottostanti e prevengono il degrado degli habitat.</p>
-                <p>Ogni anno milioni di squali vengono cacciati principalmente per il finning (il taglio delle pinne). Sostenere la conservazione marina significa proteggere il futuro del nostro pianeta blu.</p>
-            </div>
-            <div class="info-stats">
-                <div class="stat-card">
-                    <h4>400+ Milioni</h4>
-                    <p>Anni di evoluzione sulla Terra</p>
-                </div>
-                <div class="stat-card">
-                    <h4>~100 Milioni</h4>
-                    <p>Squali uccisi ogni anno dall'uomo</p>
-                </div>
+    <!-- Modal Dettagli Specie Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Titolo</h2>
+            <div id="modal-body">
+                <!-- Contenuto dinamico caricato con JS -->
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>Creato con passione per l'oceano &bull; &copy; 2026 SharkWorld</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
