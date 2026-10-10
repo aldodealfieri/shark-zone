@@ -6,7 +6,7 @@
     <title>Abissi Marini - Il Mondo degli Squali</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-    <!-- FontAwesome per le icone -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <!-- Sezione Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="bubbles">
             <div class="bubble"></div>
@@ -48,7 +48,7 @@
         </div>
     </section>
 
-    <!-- Sezione Specie -->
+    <!-- Specie -->
     <section id="specie" class="section">
         <div class="container">
             <h2 class="section-title">Le Specie Più Iconiche</h2>
@@ -106,14 +106,13 @@
         </div>
     </section>
 
-    <!-- Sezione Mappa e Habitat Interattiva -->
+    <!-- Mappa Interattiva -->
     <section id="mappa" class="section dark-section">
         <div class="container">
             <h2 class="section-title text-white">Mappa e Zone di Diffusione</h2>
             <p class="section-subtitle text-light">Clicca sui pin della mappa interattiva per scoprire dove vive ciascun gruppo.</p>
             
             <div class="map-wrapper">
-                <!-- Mappa stilizzata degli oceani -->
                 <div class="ocean-map-graphic">
                     <div class="map-pin pin-1" onclick="showHabitatInfo('artico')">
                         <i class="fa-solid fa-location-dot"></i>
@@ -133,7 +132,6 @@
                     </div>
                 </div>
 
-                <!-- Box Informativo Dinamico della Mappa -->
                 <div id="map-info-box" class="map-info-box">
                     <h3>🌍 Seleziona un'area sulla mappa</h3>
                     <p>Clicca su uno dei marker geografici sopra per leggere le caratteristiche delle acque e le specie che vi abitano.</p>
@@ -142,7 +140,7 @@
         </div>
     </section>
 
-    <!-- Sezione Quiz Interattivo -->
+    <!-- Quiz -->
     <section id="quiz" class="section">
         <div class="container">
             <h2 class="section-title">Mini Quiz: Che Squalo Sei?</h2>
@@ -176,7 +174,7 @@
         </div>
     </section>
 
-    <!-- Sezione Curiosità Ampliata -->
+    <!-- Curiosità -->
     <section id="curiosita" class="section dark-section">
         <div class="container">
             <h2 class="section-title text-white">Lo sapevi che...?</h2>
@@ -191,7 +189,7 @@
         </div>
     </section>
 
-    <!-- Modal Dettagli Specie Popup -->
+    <!-- Modal Popup -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
