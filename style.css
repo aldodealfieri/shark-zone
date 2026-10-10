@@ -203,11 +203,11 @@ nav ul li a:hover { color: var(--accent); }
 .map-pin:hover { background: var(--secondary); color: var(--dark); transform: scale(1.1); }
 .map-pin:hover i { color: var(--dark); }
 
-/* Posizioni dei pin sulla mappa */
-.pin-1 { top: 12%; left: 45%; }
-.pin-2 { top: 40%; left: 28%; }
-.pin-3 { top: 60%; left: 62%; }
-.pin-4 { top: 45%; left: 80%; }
+/* Posizioni corrette dei pin sulla mappa */
+.pin-1 { top: 10%; left: 45%; } /* Oceano Artico (in alto al centro) */
+.pin-2 { top: 42%; left: 32%; } /* Oceano Atlantico (in mezzo tra America ed Europa) */
+.pin-3 { top: 58%; left: 54%; } /* Oceano Indiano (sotto l'India) */
+.pin-4 { top: 45%; left: 78%; } /* Oceano Pacifico (a destra) */
 
 .map-info-box {
     margin-top: 25px;
