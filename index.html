@@ -57,7 +57,8 @@
             <div class="grid-cards">
                 <!-- Squalo Bianco -->
                 <div class="card" onclick="openModal('bianco')">
-                    <div class="card-img img-bianco">
+                    <div class="card-img-container">
+                        <img src="img/bianco.jpg" alt="Squalo Bianco" onerror="this.src='https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=1000&q=80'">
                         <span class="badge red">Vulnerabile</span>
                     </div>
                     <div class="card-body">
@@ -69,7 +70,8 @@
 
                 <!-- Squalo Balena -->
                 <div class="card" onclick="openModal('balena')">
-                    <div class="card-img img-balena">
+                    <div class="card-img-container">
+                        <img src="img/balena.jpg" alt="Squalo Balena" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80'">
                         <span class="badge green">Gigante Buono</span>
                     </div>
                     <div class="card-body">
@@ -81,7 +83,8 @@
 
                 <!-- Squalo Martello -->
                 <div class="card" onclick="openModal('martello')">
-                    <div class="card-img img-martello">
+                    <div class="card-img-container">
+                        <img src="img/martello.jpg" alt="Squalo Martello" onerror="this.src='https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=1000&q=80'">
                         <span class="badge blue">In Pericolo</span>
                     </div>
                     <div class="card-body">
@@ -93,7 +96,8 @@
 
                 <!-- Squalo Pinna Nera -->
                 <div class="card" onclick="openModal('barriera')">
-                    <div class="card-img img-pinna-nera">
+                    <div class="card-img-container">
+                        <img src="img/pinna-nera.jpg" alt="Squalo Pinna Nera" onerror="this.src='https://images.unsplash.com/photo-1568048114314-eef16f385c85?auto=format&fit=crop&w=1000&q=80'">
                         <span class="badge orange">Barriera Corallina</span>
                     </div>
                     <div class="card-body">
@@ -114,6 +118,7 @@
             
             <div class="map-wrapper">
                 <div class="ocean-map-graphic">
+                    <img src="img/mappa.jpg" alt="Mappa del Mondo" class="map-bg-img" onerror="this.style.display='none'">
                     <div class="map-pin pin-1" onclick="showHabitatInfo('artico')">
                         <i class="fa-solid fa-location-dot"></i>
                         <span>Oceano Artico</span>
