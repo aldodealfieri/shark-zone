@@ -34,6 +34,38 @@ const sharkData = {
     }
 };
 
+// Dati interattivi per la Mappa degli Habitat
+const habitatInfo = {
+    artico: {
+        title: "❄️ Oceano Artico e Mari Freddi",
+        text: "Acque gelide e profonde caratterizzate da temperature prossime allo zero. È l'habitat esclusivo del famosissimo e longevo Squalo della Groenlandia, capace di vivere per secoli."
+    },
+    atlantico: {
+        title: "🌊 Oceano Atlantico",
+        text: "Acque temperate e pelagiche aperte. È la zona d'elezione per il Grande Squalo Bianco e lo Squalo Mako, che sfruttano le forti correnti per spostarsi lungo le coste."
+    },
+    indiano: {
+        title: "☀️ Oceano Indiano e Barriere Coralline",
+        text: "Mari caldi, tropicali e lagune cristalline ricche di vita. Ospitano grandi popolazioni di squali di barriera (come il Pinna Nera) e passaggi di squali balena."
+    },
+    pacifico: {
+        title: "🌀 Oceano Pacifico",
+        text: "Il bacino oceanico più vasto del pianeta. Qui si concentrano i famosi banchi di squali martello attorno alle secche vulcaniche e una biodiversità marina straordinaria."
+    }
+};
+
+function showHabitatInfo(zone) {
+    const data = habitatInfo[zone];
+    const box = document.getElementById('map-info-box');
+    if(!data || !box) return;
+
+    box.style.opacity = '0';
+    setTimeout(() => {
+        box.innerHTML = `<h3>${data.title}</h3><p>${data.text}</p>`;
+        box.style.opacity = '1';
+    }, 200);
+}
+
 // Lista ricca di curiosità sugli squali
 const sharkFacts = [
     "Gli squali esistono da più di 400 milioni di anni, ovvero da prima che comparissero gli alberi sulla Terra!",
